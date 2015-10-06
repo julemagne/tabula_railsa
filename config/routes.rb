@@ -4,6 +4,7 @@ Rails.application.routes.draw do
 
   # You can have the root of your site routed with "root"
   root 'home#form'
+  get 'home/form'
   post 'home/form'
 
   # Example of regular route:
