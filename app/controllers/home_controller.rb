@@ -1,11 +1,11 @@
 class HomeController < ApplicationController
 
   def form
-    if request.post?
-      @answer = Answer.create!(answer_params)
-    else
-      @answer = Answer.new
-    end
+    @answer = Answer.new
+  end
+
+  def results
+    @answer = Answer.save(answer_params)
   end
 
   private def answer_params

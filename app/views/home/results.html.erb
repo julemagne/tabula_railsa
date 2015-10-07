@@ -1,0 +1,7 @@
+<% if request.post? %>
+  Thanks for submitting the form!  Here are your answers:<br>
+  Name: <%= @answer.name %><br>
+  Do you like Chocolate? <%= @answer.chocolate ? "Yes!" : "No" %><br>
+  Do you like Rainbows? <%= @answer.rainbows ? "Yes!" : "No" %><br>
+  Do you like Puppies? <%= @answer.puppies ? "Yes!" : "No" %><br>
+  Do you like Cold Hard Cash? <%= @answer.cold_hard_cash ? "Yes!" : "No" %><br>
