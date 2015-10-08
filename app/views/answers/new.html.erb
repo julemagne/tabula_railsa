@@ -1,19 +1,15 @@
-<h1>Super Form Partial</h1>
+<h1>Super Form Partial Appears</h1>
 
-<%= form_for(@answer, url: answers_create_path) do |f| %>
+<%= form_for(@answer, url: answers_path) do |f| %>
   <div>
     Name: <%= f.text_field :name %>
   </div>
   <div>
     Favorites:
     <ul>
-      params=(:name, :chocolate, :puppies, :rainbows, :cold_hard_cash)
-      params.each do |p|
-      <%= render 'form' %>
-      <%= render 'form' %>
-      <%= render 'form' %>
-      <%= render 'form' %>
-        end
+      <% [:chocolate, :puppies, :rainbows, :cold_hard_cash].each do |p| %>
+      <%= render partial: 'form', locals: {form f, field_name: p} %>
+      <% end %>
     </ul>
   </div>
 <%= f.submit %>
