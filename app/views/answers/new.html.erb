@@ -8,7 +8,7 @@
     Favorites:
     <ul>
       <% [:chocolate, :puppies, :rainbows, :cold_hard_cash].each do |p| %>
-      <%= render partial: 'form', locals: {form f, field_name: p} %>
+        <%= render partial: 'checkbox', locals: {form: f, field_name: p} %>
       <% end %>
     </ul>
   </div>
