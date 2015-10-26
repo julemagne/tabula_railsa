@@ -14,3 +14,14 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
+
+function disableClick() {
+  $(event.target).closest('form').submit();
+  $(event.target).prop('disabled', true);
+}
+
+function noMoreClicks() {
+  $('.input[type=submit]').on('click', disableClick);
+}
+
+$(noMoreClicks);
